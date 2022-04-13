@@ -1,0 +1,46 @@
+//Only compatible with the development version of CIF3.
+
+from "Tooldefs/config.tooldef" import *;
+from "Tooldefs/myToolbox.tooldef" import *;
+
+// Merge supervisor, timers and hardware map.
+cifmerge(supervisor(), hardware_sup(), "-o", sup_HW());
+
+// Eliminate the event condition requirements.
+cif2cif(sup_HW(),
+    "-o", sup_HW(),
+    "-t elim-state-evt-excl-invs");
+outln("Removed event exclusion invariants.");
+
+// Remove algebraic variables.
+cif2cif(sup_HW(),
+    "-o", sup_HW(),
+    "-t elim-alg-vars,simplify-values");
+outln("Removed algebraic variables.");
+
+// Linearize the model.
+cif2cif(sup_HW(),
+    "-o", sup_HW(),
+    "-t linearize-merge,simplify-values");
+outln("Linearized specification.");
+
+// Remove unnamed locations to reduce code size.
+removeUnamedLocations(sup_HW(), plc_model());
+outln("Removed unamed locations.");
+
+// Create directory for PLC Code.
+rmdir(plc_path(), force=true);
+mkdir(plc_path(), force=true);
+
+// Generate PLC code, and ignition tags.
+cif2plc(plc_model(),
+    "--option-dialog=0",
+    "-t scl",
+    "-o", plc_path(),
+    "-b 32",
+    "--ignition-xml=true",
+    "--gen-tags=true",
+    "--real-IQ=true",
+    "--elim-enums=0",
+    "--split-events=1");
+outln("Folder \"%s\": generated.", plc_path());

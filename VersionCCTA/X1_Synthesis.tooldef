@@ -1,0 +1,17 @@
+from "Tooldefs/config.tooldef" import *;
+from "Tooldefs/myToolbox.tooldef" import *;
+
+// Create directory for generated files.
+mkdir(gen_folder(), force=true);
+
+// Synthesise supervisor.
+outln("File \"%s\": synthesizing...", supervisor());
+cifdatasynth(plantReq(),
+    "--option-dialog=1",
+    "-o", supervisor(),
+    "-n", fmt("sup"),
+    "-t normal",
+    "-m debug",
+    "--stats=timing",
+    "--bdd-table=400000");
+outln("File \"%s\": synthesized.", supervisor());

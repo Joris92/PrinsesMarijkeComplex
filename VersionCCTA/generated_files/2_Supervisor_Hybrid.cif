@@ -3196,10 +3196,10 @@ group sup:
               edge .North.Upstream.Gates.East.Sensor.u_open_on, .North.Upstream.Gates.East.Sensor.u_closed_off when Actuator.Opening;
               edge .North.Upstream.Gates.East.Sensor.u_closed_on, .North.Upstream.Gates.East.Sensor.u_open_off when Actuator.Closing;
           end
-          requirement invariant .North.Upstream.Gates.East.Actuator.c_endStopOpening needs Sensor.Open;
-          requirement invariant .North.Upstream.Gates.East.Actuator.c_endStopClosing needs Sensor.Closed;
-          requirement invariant .North.Upstream.Gates.East.Actuator.c_open needs not Sensor.Open;
-          requirement invariant .North.Upstream.Gates.East.Actuator.c_close needs not Sensor.Closed;
+          supervisor invariant .North.Upstream.Gates.East.Actuator.c_endStopOpening needs Sensor.Open;
+          supervisor invariant .North.Upstream.Gates.East.Actuator.c_endStopClosing needs Sensor.Closed;
+          supervisor invariant .North.Upstream.Gates.East.Actuator.c_open needs not Sensor.Open;
+          supervisor invariant .North.Upstream.Gates.East.Actuator.c_close needs not Sensor.Closed;
         end
         group West:
           alg bool Moving = not Actuator.Rest;
@@ -3237,10 +3237,10 @@ group sup:
               edge .North.Upstream.Gates.West.Sensor.u_open_on, .North.Upstream.Gates.West.Sensor.u_closed_off when Actuator.Opening;
               edge .North.Upstream.Gates.West.Sensor.u_closed_on, .North.Upstream.Gates.West.Sensor.u_open_off when Actuator.Closing;
           end
-          requirement invariant .North.Upstream.Gates.West.Actuator.c_endStopOpening needs Sensor.Open;
-          requirement invariant .North.Upstream.Gates.West.Actuator.c_endStopClosing needs Sensor.Closed;
-          requirement invariant .North.Upstream.Gates.West.Actuator.c_open needs not Sensor.Open;
-          requirement invariant .North.Upstream.Gates.West.Actuator.c_close needs not Sensor.Closed;
+          supervisor invariant .North.Upstream.Gates.West.Actuator.c_endStopOpening needs Sensor.Open;
+          supervisor invariant .North.Upstream.Gates.West.Actuator.c_endStopClosing needs Sensor.Closed;
+          supervisor invariant .North.Upstream.Gates.West.Actuator.c_open needs not Sensor.Open;
+          supervisor invariant .North.Upstream.Gates.West.Actuator.c_close needs not Sensor.Closed;
         end
       end
       group Paddles:
@@ -3282,10 +3282,10 @@ group sup:
               edge .North.Upstream.Paddles.East.Sensor.u_open_on, .North.Upstream.Paddles.East.Sensor.u_closed_off when Actuator.Opening;
               edge .North.Upstream.Paddles.East.Sensor.u_closed_on, .North.Upstream.Paddles.East.Sensor.u_open_off when Actuator.Closing;
           end
-          requirement invariant .North.Upstream.Paddles.East.Actuator.c_endStopOpening needs Sensor.Open;
-          requirement invariant .North.Upstream.Paddles.East.Actuator.c_endStopClosing needs Sensor.Closed;
-          requirement invariant .North.Upstream.Paddles.East.Actuator.c_open needs not Sensor.Open;
-          requirement invariant .North.Upstream.Paddles.East.Actuator.c_close needs not Sensor.Closed;
+          supervisor invariant .North.Upstream.Paddles.East.Actuator.c_endStopOpening needs Sensor.Open;
+          supervisor invariant .North.Upstream.Paddles.East.Actuator.c_endStopClosing needs Sensor.Closed;
+          supervisor invariant .North.Upstream.Paddles.East.Actuator.c_open needs not Sensor.Open;
+          supervisor invariant .North.Upstream.Paddles.East.Actuator.c_close needs not Sensor.Closed;
         end
         group West:
           alg bool Moving = not Actuator.Rest;
@@ -3323,10 +3323,10 @@ group sup:
               edge .North.Upstream.Paddles.West.Sensor.u_open_on, .North.Upstream.Paddles.West.Sensor.u_closed_off when Actuator.Opening;
               edge .North.Upstream.Paddles.West.Sensor.u_closed_on, .North.Upstream.Paddles.West.Sensor.u_open_off when Actuator.Closing;
           end
-          requirement invariant .North.Upstream.Paddles.West.Actuator.c_endStopOpening needs Sensor.Open;
-          requirement invariant .North.Upstream.Paddles.West.Actuator.c_endStopClosing needs Sensor.Closed;
-          requirement invariant .North.Upstream.Paddles.West.Actuator.c_open needs not Sensor.Open;
-          requirement invariant .North.Upstream.Paddles.West.Actuator.c_close needs not Sensor.Closed;
+          supervisor invariant .North.Upstream.Paddles.West.Actuator.c_endStopOpening needs Sensor.Open;
+          supervisor invariant .North.Upstream.Paddles.West.Actuator.c_endStopClosing needs Sensor.Closed;
+          supervisor invariant .North.Upstream.Paddles.West.Actuator.c_open needs not Sensor.Open;
+          supervisor invariant .North.Upstream.Paddles.West.Actuator.c_close needs not Sensor.Closed;
         end
       end
       group EnteringTLs:
@@ -3658,10 +3658,10 @@ group sup:
               edge .North.Downstream.Gates.East.Sensor.u_open_on, .North.Downstream.Gates.East.Sensor.u_closed_off when Actuator.Opening;
               edge .North.Downstream.Gates.East.Sensor.u_closed_on, .North.Downstream.Gates.East.Sensor.u_open_off when Actuator.Closing;
           end
-          requirement invariant .North.Downstream.Gates.East.Actuator.c_endStopOpening needs Sensor.Open;
-          requirement invariant .North.Downstream.Gates.East.Actuator.c_endStopClosing needs Sensor.Closed;
-          requirement invariant .North.Downstream.Gates.East.Actuator.c_open needs not Sensor.Open;
-          requirement invariant .North.Downstream.Gates.East.Actuator.c_close needs not Sensor.Closed;
+          supervisor invariant .North.Downstream.Gates.East.Actuator.c_endStopOpening needs Sensor.Open;
+          supervisor invariant .North.Downstream.Gates.East.Actuator.c_endStopClosing needs Sensor.Closed;
+          supervisor invariant .North.Downstream.Gates.East.Actuator.c_open needs not Sensor.Open;
+          supervisor invariant .North.Downstream.Gates.East.Actuator.c_close needs not Sensor.Closed;
         end
         group West:
           alg bool Moving = not Actuator.Rest;
@@ -3699,10 +3699,10 @@ group sup:
               edge .North.Downstream.Gates.West.Sensor.u_open_on, .North.Downstream.Gates.West.Sensor.u_closed_off when Actuator.Opening;
               edge .North.Downstream.Gates.West.Sensor.u_closed_on, .North.Downstream.Gates.West.Sensor.u_open_off when Actuator.Closing;
           end
-          requirement invariant .North.Downstream.Gates.West.Actuator.c_endStopOpening needs Sensor.Open;
-          requirement invariant .North.Downstream.Gates.West.Actuator.c_endStopClosing needs Sensor.Closed;
-          requirement invariant .North.Downstream.Gates.West.Actuator.c_open needs not Sensor.Open;
-          requirement invariant .North.Downstream.Gates.West.Actuator.c_close needs not Sensor.Closed;
+          supervisor invariant .North.Downstream.Gates.West.Actuator.c_endStopOpening needs Sensor.Open;
+          supervisor invariant .North.Downstream.Gates.West.Actuator.c_endStopClosing needs Sensor.Closed;
+          supervisor invariant .North.Downstream.Gates.West.Actuator.c_open needs not Sensor.Open;
+          supervisor invariant .North.Downstream.Gates.West.Actuator.c_close needs not Sensor.Closed;
         end
       end
       group Paddles:
@@ -3744,10 +3744,10 @@ group sup:
               edge .North.Downstream.Paddles.East.Sensor.u_open_on, .North.Downstream.Paddles.East.Sensor.u_closed_off when Actuator.Opening;
               edge .North.Downstream.Paddles.East.Sensor.u_closed_on, .North.Downstream.Paddles.East.Sensor.u_open_off when Actuator.Closing;
           end
-          requirement invariant .North.Downstream.Paddles.East.Actuator.c_endStopOpening needs Sensor.Open;
-          requirement invariant .North.Downstream.Paddles.East.Actuator.c_endStopClosing needs Sensor.Closed;
-          requirement invariant .North.Downstream.Paddles.East.Actuator.c_open needs not Sensor.Open;
-          requirement invariant .North.Downstream.Paddles.East.Actuator.c_close needs not Sensor.Closed;
+          supervisor invariant .North.Downstream.Paddles.East.Actuator.c_endStopOpening needs Sensor.Open;
+          supervisor invariant .North.Downstream.Paddles.East.Actuator.c_endStopClosing needs Sensor.Closed;
+          supervisor invariant .North.Downstream.Paddles.East.Actuator.c_open needs not Sensor.Open;
+          supervisor invariant .North.Downstream.Paddles.East.Actuator.c_close needs not Sensor.Closed;
         end
         group West:
           alg bool Moving = not Actuator.Rest;
@@ -3785,10 +3785,10 @@ group sup:
               edge .North.Downstream.Paddles.West.Sensor.u_open_on, .North.Downstream.Paddles.West.Sensor.u_closed_off when Actuator.Opening;
               edge .North.Downstream.Paddles.West.Sensor.u_closed_on, .North.Downstream.Paddles.West.Sensor.u_open_off when Actuator.Closing;
           end
-          requirement invariant .North.Downstream.Paddles.West.Actuator.c_endStopOpening needs Sensor.Open;
-          requirement invariant .North.Downstream.Paddles.West.Actuator.c_endStopClosing needs Sensor.Closed;
-          requirement invariant .North.Downstream.Paddles.West.Actuator.c_open needs not Sensor.Open;
-          requirement invariant .North.Downstream.Paddles.West.Actuator.c_close needs not Sensor.Closed;
+          supervisor invariant .North.Downstream.Paddles.West.Actuator.c_endStopOpening needs Sensor.Open;
+          supervisor invariant .North.Downstream.Paddles.West.Actuator.c_endStopClosing needs Sensor.Closed;
+          supervisor invariant .North.Downstream.Paddles.West.Actuator.c_open needs not Sensor.Open;
+          supervisor invariant .North.Downstream.Paddles.West.Actuator.c_close needs not Sensor.Closed;
         end
       end
       group EnteringTLs:
@@ -4166,114 +4166,114 @@ group sup:
       location UpstreamLeavingTLGreen:
         edge .North.Commands.Deactivate goto NoCommand;
     end
-    requirement invariant not Downstream.Paddles.Closed disables .North.Upstream.Paddles.East.Actuator.c_open;
-    requirement invariant not Downstream.Paddles.Closed disables .North.Upstream.Paddles.West.Actuator.c_open;
-    requirement invariant not Upstream.Paddles.Closed disables .North.Downstream.Paddles.East.Actuator.c_open;
-    requirement invariant not Upstream.Paddles.Closed disables .North.Downstream.Paddles.West.Actuator.c_open;
-    requirement invariant not Downstream.Gates.Closed disables .North.Upstream.Paddles.East.Actuator.c_open;
-    requirement invariant not Downstream.Gates.Closed disables .North.Upstream.Paddles.West.Actuator.c_open;
-    requirement invariant not Upstream.Gates.Closed disables .North.Downstream.Paddles.East.Actuator.c_open;
-    requirement invariant not Upstream.Gates.Closed disables .North.Downstream.Paddles.West.Actuator.c_open;
-    requirement invariant Downstream.EqualWaterSensor.Unequal disables .North.Downstream.Gates.East.Actuator.c_open;
-    requirement invariant Downstream.EqualWaterSensor.Unequal disables .North.Downstream.Gates.West.Actuator.c_open;
-    requirement invariant Upstream.EqualWaterSensor.Unequal disables .North.Upstream.Gates.East.Actuator.c_open;
-    requirement invariant Upstream.EqualWaterSensor.Unequal disables .North.Upstream.Gates.West.Actuator.c_open;
-    requirement invariant not Downstream.Paddles.Closed disables .North.Upstream.Gates.East.Actuator.c_open;
-    requirement invariant not Downstream.Paddles.Closed disables .North.Upstream.Gates.West.Actuator.c_open;
-    requirement invariant not Upstream.Paddles.Closed disables .North.Downstream.Gates.East.Actuator.c_open;
-    requirement invariant not Upstream.Paddles.Closed disables .North.Downstream.Gates.West.Actuator.c_open;
-    requirement invariant not Downstream.Gates.Closed disables .North.Upstream.Gates.East.Actuator.c_open;
-    requirement invariant not Downstream.Gates.Closed disables .North.Upstream.Gates.West.Actuator.c_open;
-    requirement invariant not Upstream.Gates.Closed disables .North.Downstream.Gates.East.Actuator.c_open;
-    requirement invariant not Upstream.Gates.Closed disables .North.Downstream.Gates.West.Actuator.c_open;
-    requirement invariant not Downstream.LeavingTLs.Red disables .North.Downstream.EnteringTLs.East.Actuator.c_g;
-    requirement invariant not Downstream.LeavingTLs.Red disables .North.Downstream.EnteringTLs.West.Actuator.c_g;
-    requirement invariant not Upstream.LeavingTLs.Red disables .North.Upstream.EnteringTLs.East.Actuator.c_g;
-    requirement invariant not Upstream.LeavingTLs.Red disables .North.Upstream.EnteringTLs.West.Actuator.c_g;
-    requirement invariant not Downstream.Gates.Open disables .North.Downstream.EnteringTLs.East.Actuator.c_g;
-    requirement invariant not Downstream.Gates.Open disables .North.Downstream.EnteringTLs.West.Actuator.c_g;
-    requirement invariant not Upstream.Gates.Open disables .North.Upstream.EnteringTLs.East.Actuator.c_g;
-    requirement invariant not Upstream.Gates.Open disables .North.Upstream.EnteringTLs.West.Actuator.c_g;
-    requirement invariant not Downstream.EnteringTLs.RedOrRedRed disables .North.Downstream.Gates.East.Actuator.c_close;
-    requirement invariant not Downstream.EnteringTLs.RedOrRedRed disables .North.Downstream.Gates.West.Actuator.c_close;
-    requirement invariant not Upstream.EnteringTLs.RedOrRedRed disables .North.Upstream.Gates.East.Actuator.c_close;
-    requirement invariant not Upstream.EnteringTLs.RedOrRedRed disables .North.Upstream.Gates.West.Actuator.c_close;
-    requirement invariant not Downstream.LeavingTLs.Red disables .North.Downstream.Gates.East.Actuator.c_close;
-    requirement invariant not Downstream.LeavingTLs.Red disables .North.Downstream.Gates.West.Actuator.c_close;
-    requirement invariant not Upstream.LeavingTLs.Red disables .North.Upstream.Gates.East.Actuator.c_close;
-    requirement invariant not Upstream.LeavingTLs.Red disables .North.Upstream.Gates.West.Actuator.c_close;
-    requirement invariant EmergencyStop.Active disables .North.Downstream.Gates.East.Actuator.c_open;
-    requirement invariant EmergencyStop.Active disables .North.Downstream.Gates.East.Actuator.c_close;
-    requirement invariant EmergencyStop.Active disables .North.Downstream.Gates.West.Actuator.c_open;
-    requirement invariant EmergencyStop.Active disables .North.Downstream.Gates.West.Actuator.c_close;
-    requirement invariant EmergencyStop.Active disables .North.Upstream.Gates.East.Actuator.c_open;
-    requirement invariant EmergencyStop.Active disables .North.Upstream.Gates.East.Actuator.c_close;
-    requirement invariant EmergencyStop.Active disables .North.Upstream.Gates.West.Actuator.c_open;
-    requirement invariant EmergencyStop.Active disables .North.Upstream.Gates.West.Actuator.c_close;
-    requirement invariant EmergencyStop.Active disables .North.Downstream.Paddles.East.Actuator.c_open;
-    requirement invariant EmergencyStop.Active disables .North.Downstream.Paddles.East.Actuator.c_close;
-    requirement invariant EmergencyStop.Active disables .North.Downstream.Paddles.West.Actuator.c_open;
-    requirement invariant EmergencyStop.Active disables .North.Downstream.Paddles.West.Actuator.c_close;
-    requirement invariant EmergencyStop.Active disables .North.Upstream.Paddles.East.Actuator.c_open;
-    requirement invariant EmergencyStop.Active disables .North.Upstream.Paddles.East.Actuator.c_close;
-    requirement invariant EmergencyStop.Active disables .North.Upstream.Paddles.West.Actuator.c_open;
-    requirement invariant EmergencyStop.Active disables .North.Upstream.Paddles.West.Actuator.c_close;
-    requirement invariant .North.Downstream.Gates.East.Actuator.c_emergencyStop needs EmergencyStop.Active or Commands.DownstreamGateStop;
-    requirement invariant .North.Downstream.Gates.West.Actuator.c_emergencyStop needs EmergencyStop.Active or Commands.DownstreamGateStop;
-    requirement invariant .North.Upstream.Gates.East.Actuator.c_emergencyStop needs EmergencyStop.Active or Commands.UpstreamGateStop;
-    requirement invariant .North.Upstream.Gates.West.Actuator.c_emergencyStop needs EmergencyStop.Active or Commands.UpstreamGateStop;
-    requirement invariant .North.Downstream.Paddles.East.Actuator.c_emergencyStop needs EmergencyStop.Active or Commands.DownstreamPaddleStop;
-    requirement invariant .North.Downstream.Paddles.West.Actuator.c_emergencyStop needs EmergencyStop.Active or Commands.DownstreamPaddleStop;
-    requirement invariant .North.Upstream.Paddles.East.Actuator.c_emergencyStop needs EmergencyStop.Active or Commands.UpstreamPaddleStop;
-    requirement invariant .North.Upstream.Paddles.West.Actuator.c_emergencyStop needs EmergencyStop.Active or Commands.UpstreamPaddleStop;
-    requirement invariant not Downstream.EnteringTLs.RedOrRedRed disables .North.Downstream.LeavingTLs.East.Actuator.c_g;
-    requirement invariant not Downstream.EnteringTLs.RedOrRedRed disables .North.Downstream.LeavingTLs.West.Actuator.c_g;
-    requirement invariant not Upstream.EnteringTLs.RedOrRedRed disables .North.Upstream.LeavingTLs.East.Actuator.c_g;
-    requirement invariant not Upstream.EnteringTLs.RedOrRedRed disables .North.Upstream.LeavingTLs.West.Actuator.c_g;
-    requirement invariant not Downstream.Gates.Open disables .North.Downstream.LeavingTLs.East.Actuator.c_g;
-    requirement invariant not Downstream.Gates.Open disables .North.Downstream.LeavingTLs.West.Actuator.c_g;
-    requirement invariant not Upstream.Gates.Open disables .North.Upstream.LeavingTLs.East.Actuator.c_g;
-    requirement invariant not Upstream.Gates.Open disables .North.Upstream.LeavingTLs.West.Actuator.c_g;
-    requirement invariant .North.Downstream.Gates.East.Actuator.c_open needs Commands.DownstreamGateOpen;
-    requirement invariant .North.Downstream.Gates.West.Actuator.c_open needs Commands.DownstreamGateOpen;
-    requirement invariant .North.Upstream.Gates.East.Actuator.c_open needs Commands.UpstreamGateOpen;
-    requirement invariant .North.Upstream.Gates.West.Actuator.c_open needs Commands.UpstreamGateOpen;
-    requirement invariant .North.Downstream.Gates.East.Actuator.c_close needs Commands.DownstreamGateClose;
-    requirement invariant .North.Downstream.Gates.West.Actuator.c_close needs Commands.DownstreamGateClose;
-    requirement invariant .North.Upstream.Gates.East.Actuator.c_close needs Commands.UpstreamGateClose;
-    requirement invariant .North.Upstream.Gates.West.Actuator.c_close needs Commands.UpstreamGateClose;
-    requirement invariant .North.Downstream.Paddles.East.Actuator.c_open needs Commands.DownstreamPaddleOpen;
-    requirement invariant .North.Downstream.Paddles.West.Actuator.c_open needs Commands.DownstreamPaddleOpen;
-    requirement invariant .North.Upstream.Paddles.East.Actuator.c_open needs Commands.UpstreamPaddleOpen;
-    requirement invariant .North.Upstream.Paddles.West.Actuator.c_open needs Commands.UpstreamPaddleOpen;
-    requirement invariant .North.Downstream.Paddles.East.Actuator.c_close needs Commands.DownstreamPaddleClose;
-    requirement invariant .North.Downstream.Paddles.West.Actuator.c_close needs Commands.DownstreamPaddleClose;
-    requirement invariant .North.Upstream.Paddles.East.Actuator.c_close needs Commands.UpstreamPaddleClose;
-    requirement invariant .North.Upstream.Paddles.West.Actuator.c_close needs Commands.UpstreamPaddleClose;
-    requirement invariant .North.Downstream.EnteringTLs.East.Actuator.c_rr needs Commands.DownstreamEnteringTLRedRed;
-    requirement invariant .North.Downstream.EnteringTLs.West.Actuator.c_rr needs Commands.DownstreamEnteringTLRedRed;
-    requirement invariant .North.Upstream.EnteringTLs.East.Actuator.c_rr needs Commands.UpstreamEnteringTLRedRed;
-    requirement invariant .North.Upstream.EnteringTLs.West.Actuator.c_rr needs Commands.UpstreamEnteringTLRedRed;
-    requirement invariant .North.Downstream.EnteringTLs.East.Actuator.c_r needs Commands.DownstreamEnteringTLRed;
-    requirement invariant .North.Downstream.EnteringTLs.West.Actuator.c_r needs Commands.DownstreamEnteringTLRed;
-    requirement invariant .North.Upstream.EnteringTLs.East.Actuator.c_r needs Commands.UpstreamEnteringTLRed;
-    requirement invariant .North.Upstream.EnteringTLs.West.Actuator.c_r needs Commands.UpstreamEnteringTLRed;
-    requirement invariant .North.Downstream.EnteringTLs.East.Actuator.c_rg needs Commands.DownstreamEnteringTLRedGreen;
-    requirement invariant .North.Downstream.EnteringTLs.West.Actuator.c_rg needs Commands.DownstreamEnteringTLRedGreen;
-    requirement invariant .North.Upstream.EnteringTLs.East.Actuator.c_rg needs Commands.UpstreamEnteringTLRedGreen;
-    requirement invariant .North.Upstream.EnteringTLs.West.Actuator.c_rg needs Commands.UpstreamEnteringTLRedGreen;
-    requirement invariant .North.Downstream.EnteringTLs.East.Actuator.c_g needs Commands.DownstreamEnteringTLGreen;
-    requirement invariant .North.Downstream.EnteringTLs.West.Actuator.c_g needs Commands.DownstreamEnteringTLGreen;
-    requirement invariant .North.Upstream.EnteringTLs.East.Actuator.c_g needs Commands.UpstreamEnteringTLGreen;
-    requirement invariant .North.Upstream.EnteringTLs.West.Actuator.c_g needs Commands.UpstreamEnteringTLGreen;
-    requirement invariant .North.Downstream.LeavingTLs.East.Actuator.c_r needs Commands.DownstreamLeavingTLRed;
-    requirement invariant .North.Downstream.LeavingTLs.West.Actuator.c_r needs Commands.DownstreamLeavingTLRed;
-    requirement invariant .North.Upstream.LeavingTLs.East.Actuator.c_r needs Commands.UpstreamLeavingTLRed;
-    requirement invariant .North.Upstream.LeavingTLs.West.Actuator.c_r needs Commands.UpstreamLeavingTLRed;
-    requirement invariant .North.Downstream.LeavingTLs.East.Actuator.c_g needs Commands.DownstreamLeavingTLGreen;
-    requirement invariant .North.Downstream.LeavingTLs.West.Actuator.c_g needs Commands.DownstreamLeavingTLGreen;
-    requirement invariant .North.Upstream.LeavingTLs.East.Actuator.c_g needs Commands.UpstreamLeavingTLGreen;
-    requirement invariant .North.Upstream.LeavingTLs.West.Actuator.c_g needs Commands.UpstreamLeavingTLGreen;
+    supervisor invariant not Downstream.Paddles.Closed disables .North.Upstream.Paddles.East.Actuator.c_open;
+    supervisor invariant not Downstream.Paddles.Closed disables .North.Upstream.Paddles.West.Actuator.c_open;
+    supervisor invariant not Upstream.Paddles.Closed disables .North.Downstream.Paddles.East.Actuator.c_open;
+    supervisor invariant not Upstream.Paddles.Closed disables .North.Downstream.Paddles.West.Actuator.c_open;
+    supervisor invariant not Downstream.Gates.Closed disables .North.Upstream.Paddles.East.Actuator.c_open;
+    supervisor invariant not Downstream.Gates.Closed disables .North.Upstream.Paddles.West.Actuator.c_open;
+    supervisor invariant not Upstream.Gates.Closed disables .North.Downstream.Paddles.East.Actuator.c_open;
+    supervisor invariant not Upstream.Gates.Closed disables .North.Downstream.Paddles.West.Actuator.c_open;
+    supervisor invariant Downstream.EqualWaterSensor.Unequal disables .North.Downstream.Gates.East.Actuator.c_open;
+    supervisor invariant Downstream.EqualWaterSensor.Unequal disables .North.Downstream.Gates.West.Actuator.c_open;
+    supervisor invariant Upstream.EqualWaterSensor.Unequal disables .North.Upstream.Gates.East.Actuator.c_open;
+    supervisor invariant Upstream.EqualWaterSensor.Unequal disables .North.Upstream.Gates.West.Actuator.c_open;
+    supervisor invariant not Downstream.Paddles.Closed disables .North.Upstream.Gates.East.Actuator.c_open;
+    supervisor invariant not Downstream.Paddles.Closed disables .North.Upstream.Gates.West.Actuator.c_open;
+    supervisor invariant not Upstream.Paddles.Closed disables .North.Downstream.Gates.East.Actuator.c_open;
+    supervisor invariant not Upstream.Paddles.Closed disables .North.Downstream.Gates.West.Actuator.c_open;
+    supervisor invariant not Downstream.Gates.Closed disables .North.Upstream.Gates.East.Actuator.c_open;
+    supervisor invariant not Downstream.Gates.Closed disables .North.Upstream.Gates.West.Actuator.c_open;
+    supervisor invariant not Upstream.Gates.Closed disables .North.Downstream.Gates.East.Actuator.c_open;
+    supervisor invariant not Upstream.Gates.Closed disables .North.Downstream.Gates.West.Actuator.c_open;
+    supervisor invariant not Downstream.LeavingTLs.Red disables .North.Downstream.EnteringTLs.East.Actuator.c_g;
+    supervisor invariant not Downstream.LeavingTLs.Red disables .North.Downstream.EnteringTLs.West.Actuator.c_g;
+    supervisor invariant not Upstream.LeavingTLs.Red disables .North.Upstream.EnteringTLs.East.Actuator.c_g;
+    supervisor invariant not Upstream.LeavingTLs.Red disables .North.Upstream.EnteringTLs.West.Actuator.c_g;
+    supervisor invariant not Downstream.Gates.Open disables .North.Downstream.EnteringTLs.East.Actuator.c_g;
+    supervisor invariant not Downstream.Gates.Open disables .North.Downstream.EnteringTLs.West.Actuator.c_g;
+    supervisor invariant not Upstream.Gates.Open disables .North.Upstream.EnteringTLs.East.Actuator.c_g;
+    supervisor invariant not Upstream.Gates.Open disables .North.Upstream.EnteringTLs.West.Actuator.c_g;
+    supervisor invariant not Downstream.EnteringTLs.RedOrRedRed disables .North.Downstream.Gates.East.Actuator.c_close;
+    supervisor invariant not Downstream.EnteringTLs.RedOrRedRed disables .North.Downstream.Gates.West.Actuator.c_close;
+    supervisor invariant not Upstream.EnteringTLs.RedOrRedRed disables .North.Upstream.Gates.East.Actuator.c_close;
+    supervisor invariant not Upstream.EnteringTLs.RedOrRedRed disables .North.Upstream.Gates.West.Actuator.c_close;
+    supervisor invariant not Downstream.LeavingTLs.Red disables .North.Downstream.Gates.East.Actuator.c_close;
+    supervisor invariant not Downstream.LeavingTLs.Red disables .North.Downstream.Gates.West.Actuator.c_close;
+    supervisor invariant not Upstream.LeavingTLs.Red disables .North.Upstream.Gates.East.Actuator.c_close;
+    supervisor invariant not Upstream.LeavingTLs.Red disables .North.Upstream.Gates.West.Actuator.c_close;
+    supervisor invariant EmergencyStop.Active disables .North.Downstream.Gates.East.Actuator.c_open;
+    supervisor invariant EmergencyStop.Active disables .North.Downstream.Gates.East.Actuator.c_close;
+    supervisor invariant EmergencyStop.Active disables .North.Downstream.Gates.West.Actuator.c_open;
+    supervisor invariant EmergencyStop.Active disables .North.Downstream.Gates.West.Actuator.c_close;
+    supervisor invariant EmergencyStop.Active disables .North.Upstream.Gates.East.Actuator.c_open;
+    supervisor invariant EmergencyStop.Active disables .North.Upstream.Gates.East.Actuator.c_close;
+    supervisor invariant EmergencyStop.Active disables .North.Upstream.Gates.West.Actuator.c_open;
+    supervisor invariant EmergencyStop.Active disables .North.Upstream.Gates.West.Actuator.c_close;
+    supervisor invariant EmergencyStop.Active disables .North.Downstream.Paddles.East.Actuator.c_open;
+    supervisor invariant EmergencyStop.Active disables .North.Downstream.Paddles.East.Actuator.c_close;
+    supervisor invariant EmergencyStop.Active disables .North.Downstream.Paddles.West.Actuator.c_open;
+    supervisor invariant EmergencyStop.Active disables .North.Downstream.Paddles.West.Actuator.c_close;
+    supervisor invariant EmergencyStop.Active disables .North.Upstream.Paddles.East.Actuator.c_open;
+    supervisor invariant EmergencyStop.Active disables .North.Upstream.Paddles.East.Actuator.c_close;
+    supervisor invariant EmergencyStop.Active disables .North.Upstream.Paddles.West.Actuator.c_open;
+    supervisor invariant EmergencyStop.Active disables .North.Upstream.Paddles.West.Actuator.c_close;
+    supervisor invariant .North.Downstream.Gates.East.Actuator.c_emergencyStop needs EmergencyStop.Active or Commands.DownstreamGateStop;
+    supervisor invariant .North.Downstream.Gates.West.Actuator.c_emergencyStop needs EmergencyStop.Active or Commands.DownstreamGateStop;
+    supervisor invariant .North.Upstream.Gates.East.Actuator.c_emergencyStop needs EmergencyStop.Active or Commands.UpstreamGateStop;
+    supervisor invariant .North.Upstream.Gates.West.Actuator.c_emergencyStop needs EmergencyStop.Active or Commands.UpstreamGateStop;
+    supervisor invariant .North.Downstream.Paddles.East.Actuator.c_emergencyStop needs EmergencyStop.Active or Commands.DownstreamPaddleStop;
+    supervisor invariant .North.Downstream.Paddles.West.Actuator.c_emergencyStop needs EmergencyStop.Active or Commands.DownstreamPaddleStop;
+    supervisor invariant .North.Upstream.Paddles.East.Actuator.c_emergencyStop needs EmergencyStop.Active or Commands.UpstreamPaddleStop;
+    supervisor invariant .North.Upstream.Paddles.West.Actuator.c_emergencyStop needs EmergencyStop.Active or Commands.UpstreamPaddleStop;
+    supervisor invariant not Downstream.EnteringTLs.RedOrRedRed disables .North.Downstream.LeavingTLs.East.Actuator.c_g;
+    supervisor invariant not Downstream.EnteringTLs.RedOrRedRed disables .North.Downstream.LeavingTLs.West.Actuator.c_g;
+    supervisor invariant not Upstream.EnteringTLs.RedOrRedRed disables .North.Upstream.LeavingTLs.East.Actuator.c_g;
+    supervisor invariant not Upstream.EnteringTLs.RedOrRedRed disables .North.Upstream.LeavingTLs.West.Actuator.c_g;
+    supervisor invariant not Downstream.Gates.Open disables .North.Downstream.LeavingTLs.East.Actuator.c_g;
+    supervisor invariant not Downstream.Gates.Open disables .North.Downstream.LeavingTLs.West.Actuator.c_g;
+    supervisor invariant not Upstream.Gates.Open disables .North.Upstream.LeavingTLs.East.Actuator.c_g;
+    supervisor invariant not Upstream.Gates.Open disables .North.Upstream.LeavingTLs.West.Actuator.c_g;
+    supervisor invariant .North.Downstream.Gates.East.Actuator.c_open needs Commands.DownstreamGateOpen;
+    supervisor invariant .North.Downstream.Gates.West.Actuator.c_open needs Commands.DownstreamGateOpen;
+    supervisor invariant .North.Upstream.Gates.East.Actuator.c_open needs Commands.UpstreamGateOpen;
+    supervisor invariant .North.Upstream.Gates.West.Actuator.c_open needs Commands.UpstreamGateOpen;
+    supervisor invariant .North.Downstream.Gates.East.Actuator.c_close needs Commands.DownstreamGateClose;
+    supervisor invariant .North.Downstream.Gates.West.Actuator.c_close needs Commands.DownstreamGateClose;
+    supervisor invariant .North.Upstream.Gates.East.Actuator.c_close needs Commands.UpstreamGateClose;
+    supervisor invariant .North.Upstream.Gates.West.Actuator.c_close needs Commands.UpstreamGateClose;
+    supervisor invariant .North.Downstream.Paddles.East.Actuator.c_open needs Commands.DownstreamPaddleOpen;
+    supervisor invariant .North.Downstream.Paddles.West.Actuator.c_open needs Commands.DownstreamPaddleOpen;
+    supervisor invariant .North.Upstream.Paddles.East.Actuator.c_open needs Commands.UpstreamPaddleOpen;
+    supervisor invariant .North.Upstream.Paddles.West.Actuator.c_open needs Commands.UpstreamPaddleOpen;
+    supervisor invariant .North.Downstream.Paddles.East.Actuator.c_close needs Commands.DownstreamPaddleClose;
+    supervisor invariant .North.Downstream.Paddles.West.Actuator.c_close needs Commands.DownstreamPaddleClose;
+    supervisor invariant .North.Upstream.Paddles.East.Actuator.c_close needs Commands.UpstreamPaddleClose;
+    supervisor invariant .North.Upstream.Paddles.West.Actuator.c_close needs Commands.UpstreamPaddleClose;
+    supervisor invariant .North.Downstream.EnteringTLs.East.Actuator.c_rr needs Commands.DownstreamEnteringTLRedRed;
+    supervisor invariant .North.Downstream.EnteringTLs.West.Actuator.c_rr needs Commands.DownstreamEnteringTLRedRed;
+    supervisor invariant .North.Upstream.EnteringTLs.East.Actuator.c_rr needs Commands.UpstreamEnteringTLRedRed;
+    supervisor invariant .North.Upstream.EnteringTLs.West.Actuator.c_rr needs Commands.UpstreamEnteringTLRedRed;
+    supervisor invariant .North.Downstream.EnteringTLs.East.Actuator.c_r needs Commands.DownstreamEnteringTLRed;
+    supervisor invariant .North.Downstream.EnteringTLs.West.Actuator.c_r needs Commands.DownstreamEnteringTLRed;
+    supervisor invariant .North.Upstream.EnteringTLs.East.Actuator.c_r needs Commands.UpstreamEnteringTLRed;
+    supervisor invariant .North.Upstream.EnteringTLs.West.Actuator.c_r needs Commands.UpstreamEnteringTLRed;
+    supervisor invariant .North.Downstream.EnteringTLs.East.Actuator.c_rg needs Commands.DownstreamEnteringTLRedGreen;
+    supervisor invariant .North.Downstream.EnteringTLs.West.Actuator.c_rg needs Commands.DownstreamEnteringTLRedGreen;
+    supervisor invariant .North.Upstream.EnteringTLs.East.Actuator.c_rg needs Commands.UpstreamEnteringTLRedGreen;
+    supervisor invariant .North.Upstream.EnteringTLs.West.Actuator.c_rg needs Commands.UpstreamEnteringTLRedGreen;
+    supervisor invariant .North.Downstream.EnteringTLs.East.Actuator.c_g needs Commands.DownstreamEnteringTLGreen;
+    supervisor invariant .North.Downstream.EnteringTLs.West.Actuator.c_g needs Commands.DownstreamEnteringTLGreen;
+    supervisor invariant .North.Upstream.EnteringTLs.East.Actuator.c_g needs Commands.UpstreamEnteringTLGreen;
+    supervisor invariant .North.Upstream.EnteringTLs.West.Actuator.c_g needs Commands.UpstreamEnteringTLGreen;
+    supervisor invariant .North.Downstream.LeavingTLs.East.Actuator.c_r needs Commands.DownstreamLeavingTLRed;
+    supervisor invariant .North.Downstream.LeavingTLs.West.Actuator.c_r needs Commands.DownstreamLeavingTLRed;
+    supervisor invariant .North.Upstream.LeavingTLs.East.Actuator.c_r needs Commands.UpstreamLeavingTLRed;
+    supervisor invariant .North.Upstream.LeavingTLs.West.Actuator.c_r needs Commands.UpstreamLeavingTLRed;
+    supervisor invariant .North.Downstream.LeavingTLs.East.Actuator.c_g needs Commands.DownstreamLeavingTLGreen;
+    supervisor invariant .North.Downstream.LeavingTLs.West.Actuator.c_g needs Commands.DownstreamLeavingTLGreen;
+    supervisor invariant .North.Upstream.LeavingTLs.East.Actuator.c_g needs Commands.UpstreamLeavingTLGreen;
+    supervisor invariant .North.Upstream.LeavingTLs.West.Actuator.c_g needs Commands.UpstreamLeavingTLGreen;
   end
   group South:
     group Upstream:
@@ -4316,10 +4316,10 @@ group sup:
               edge .South.Upstream.Gates.East.Sensor.u_open_on, .South.Upstream.Gates.East.Sensor.u_closed_off when Actuator.Opening;
               edge .South.Upstream.Gates.East.Sensor.u_closed_on, .South.Upstream.Gates.East.Sensor.u_open_off when Actuator.Closing;
           end
-          requirement invariant .South.Upstream.Gates.East.Actuator.c_endStopOpening needs Sensor.Open;
-          requirement invariant .South.Upstream.Gates.East.Actuator.c_endStopClosing needs Sensor.Closed;
-          requirement invariant .South.Upstream.Gates.East.Actuator.c_open needs not Sensor.Open;
-          requirement invariant .South.Upstream.Gates.East.Actuator.c_close needs not Sensor.Closed;
+          supervisor invariant .South.Upstream.Gates.East.Actuator.c_endStopOpening needs Sensor.Open;
+          supervisor invariant .South.Upstream.Gates.East.Actuator.c_endStopClosing needs Sensor.Closed;
+          supervisor invariant .South.Upstream.Gates.East.Actuator.c_open needs not Sensor.Open;
+          supervisor invariant .South.Upstream.Gates.East.Actuator.c_close needs not Sensor.Closed;
         end
         group West:
           alg bool Moving = not Actuator.Rest;
@@ -4357,10 +4357,10 @@ group sup:
               edge .South.Upstream.Gates.West.Sensor.u_open_on, .South.Upstream.Gates.West.Sensor.u_closed_off when Actuator.Opening;
               edge .South.Upstream.Gates.West.Sensor.u_closed_on, .South.Upstream.Gates.West.Sensor.u_open_off when Actuator.Closing;
           end
-          requirement invariant .South.Upstream.Gates.West.Actuator.c_endStopOpening needs Sensor.Open;
-          requirement invariant .South.Upstream.Gates.West.Actuator.c_endStopClosing needs Sensor.Closed;
-          requirement invariant .South.Upstream.Gates.West.Actuator.c_open needs not Sensor.Open;
-          requirement invariant .South.Upstream.Gates.West.Actuator.c_close needs not Sensor.Closed;
+          supervisor invariant .South.Upstream.Gates.West.Actuator.c_endStopOpening needs Sensor.Open;
+          supervisor invariant .South.Upstream.Gates.West.Actuator.c_endStopClosing needs Sensor.Closed;
+          supervisor invariant .South.Upstream.Gates.West.Actuator.c_open needs not Sensor.Open;
+          supervisor invariant .South.Upstream.Gates.West.Actuator.c_close needs not Sensor.Closed;
         end
       end
       group Paddles:
@@ -4402,10 +4402,10 @@ group sup:
               edge .South.Upstream.Paddles.East.Sensor.u_open_on, .South.Upstream.Paddles.East.Sensor.u_closed_off when Actuator.Opening;
               edge .South.Upstream.Paddles.East.Sensor.u_closed_on, .South.Upstream.Paddles.East.Sensor.u_open_off when Actuator.Closing;
           end
-          requirement invariant .South.Upstream.Paddles.East.Actuator.c_endStopOpening needs Sensor.Open;
-          requirement invariant .South.Upstream.Paddles.East.Actuator.c_endStopClosing needs Sensor.Closed;
-          requirement invariant .South.Upstream.Paddles.East.Actuator.c_open needs not Sensor.Open;
-          requirement invariant .South.Upstream.Paddles.East.Actuator.c_close needs not Sensor.Closed;
+          supervisor invariant .South.Upstream.Paddles.East.Actuator.c_endStopOpening needs Sensor.Open;
+          supervisor invariant .South.Upstream.Paddles.East.Actuator.c_endStopClosing needs Sensor.Closed;
+          supervisor invariant .South.Upstream.Paddles.East.Actuator.c_open needs not Sensor.Open;
+          supervisor invariant .South.Upstream.Paddles.East.Actuator.c_close needs not Sensor.Closed;
         end
         group West:
           alg bool Moving = not Actuator.Rest;
@@ -4443,10 +4443,10 @@ group sup:
               edge .South.Upstream.Paddles.West.Sensor.u_open_on, .South.Upstream.Paddles.West.Sensor.u_closed_off when Actuator.Opening;
               edge .South.Upstream.Paddles.West.Sensor.u_closed_on, .South.Upstream.Paddles.West.Sensor.u_open_off when Actuator.Closing;
           end
-          requirement invariant .South.Upstream.Paddles.West.Actuator.c_endStopOpening needs Sensor.Open;
-          requirement invariant .South.Upstream.Paddles.West.Actuator.c_endStopClosing needs Sensor.Closed;
-          requirement invariant .South.Upstream.Paddles.West.Actuator.c_open needs not Sensor.Open;
-          requirement invariant .South.Upstream.Paddles.West.Actuator.c_close needs not Sensor.Closed;
+          supervisor invariant .South.Upstream.Paddles.West.Actuator.c_endStopOpening needs Sensor.Open;
+          supervisor invariant .South.Upstream.Paddles.West.Actuator.c_endStopClosing needs Sensor.Closed;
+          supervisor invariant .South.Upstream.Paddles.West.Actuator.c_open needs not Sensor.Open;
+          supervisor invariant .South.Upstream.Paddles.West.Actuator.c_close needs not Sensor.Closed;
         end
       end
       group EnteringTLs:
@@ -4778,10 +4778,10 @@ group sup:
               edge .South.Downstream.Gates.East.Sensor.u_open_on, .South.Downstream.Gates.East.Sensor.u_closed_off when Actuator.Opening;
               edge .South.Downstream.Gates.East.Sensor.u_closed_on, .South.Downstream.Gates.East.Sensor.u_open_off when Actuator.Closing;
           end
-          requirement invariant .South.Downstream.Gates.East.Actuator.c_endStopOpening needs Sensor.Open;
-          requirement invariant .South.Downstream.Gates.East.Actuator.c_endStopClosing needs Sensor.Closed;
-          requirement invariant .South.Downstream.Gates.East.Actuator.c_open needs not Sensor.Open;
-          requirement invariant .South.Downstream.Gates.East.Actuator.c_close needs not Sensor.Closed;
+          supervisor invariant .South.Downstream.Gates.East.Actuator.c_endStopOpening needs Sensor.Open;
+          supervisor invariant .South.Downstream.Gates.East.Actuator.c_endStopClosing needs Sensor.Closed;
+          supervisor invariant .South.Downstream.Gates.East.Actuator.c_open needs not Sensor.Open;
+          supervisor invariant .South.Downstream.Gates.East.Actuator.c_close needs not Sensor.Closed;
         end
         group West:
           alg bool Moving = not Actuator.Rest;
@@ -4819,10 +4819,10 @@ group sup:
               edge .South.Downstream.Gates.West.Sensor.u_open_on, .South.Downstream.Gates.West.Sensor.u_closed_off when Actuator.Opening;
               edge .South.Downstream.Gates.West.Sensor.u_closed_on, .South.Downstream.Gates.West.Sensor.u_open_off when Actuator.Closing;
           end
-          requirement invariant .South.Downstream.Gates.West.Actuator.c_endStopOpening needs Sensor.Open;
-          requirement invariant .South.Downstream.Gates.West.Actuator.c_endStopClosing needs Sensor.Closed;
-          requirement invariant .South.Downstream.Gates.West.Actuator.c_open needs not Sensor.Open;
-          requirement invariant .South.Downstream.Gates.West.Actuator.c_close needs not Sensor.Closed;
+          supervisor invariant .South.Downstream.Gates.West.Actuator.c_endStopOpening needs Sensor.Open;
+          supervisor invariant .South.Downstream.Gates.West.Actuator.c_endStopClosing needs Sensor.Closed;
+          supervisor invariant .South.Downstream.Gates.West.Actuator.c_open needs not Sensor.Open;
+          supervisor invariant .South.Downstream.Gates.West.Actuator.c_close needs not Sensor.Closed;
         end
       end
       group Paddles:
@@ -4864,10 +4864,10 @@ group sup:
               edge .South.Downstream.Paddles.East.Sensor.u_open_on, .South.Downstream.Paddles.East.Sensor.u_closed_off when Actuator.Opening;
               edge .South.Downstream.Paddles.East.Sensor.u_closed_on, .South.Downstream.Paddles.East.Sensor.u_open_off when Actuator.Closing;
           end
-          requirement invariant .South.Downstream.Paddles.East.Actuator.c_endStopOpening needs Sensor.Open;
-          requirement invariant .South.Downstream.Paddles.East.Actuator.c_endStopClosing needs Sensor.Closed;
-          requirement invariant .South.Downstream.Paddles.East.Actuator.c_open needs not Sensor.Open;
-          requirement invariant .South.Downstream.Paddles.East.Actuator.c_close needs not Sensor.Closed;
+          supervisor invariant .South.Downstream.Paddles.East.Actuator.c_endStopOpening needs Sensor.Open;
+          supervisor invariant .South.Downstream.Paddles.East.Actuator.c_endStopClosing needs Sensor.Closed;
+          supervisor invariant .South.Downstream.Paddles.East.Actuator.c_open needs not Sensor.Open;
+          supervisor invariant .South.Downstream.Paddles.East.Actuator.c_close needs not Sensor.Closed;
         end
         group West:
           alg bool Moving = not Actuator.Rest;
@@ -4905,10 +4905,10 @@ group sup:
               edge .South.Downstream.Paddles.West.Sensor.u_open_on, .South.Downstream.Paddles.West.Sensor.u_closed_off when Actuator.Opening;
               edge .South.Downstream.Paddles.West.Sensor.u_closed_on, .South.Downstream.Paddles.West.Sensor.u_open_off when Actuator.Closing;
           end
-          requirement invariant .South.Downstream.Paddles.West.Actuator.c_endStopOpening needs Sensor.Open;
-          requirement invariant .South.Downstream.Paddles.West.Actuator.c_endStopClosing needs Sensor.Closed;
-          requirement invariant .South.Downstream.Paddles.West.Actuator.c_open needs not Sensor.Open;
-          requirement invariant .South.Downstream.Paddles.West.Actuator.c_close needs not Sensor.Closed;
+          supervisor invariant .South.Downstream.Paddles.West.Actuator.c_endStopOpening needs Sensor.Open;
+          supervisor invariant .South.Downstream.Paddles.West.Actuator.c_endStopClosing needs Sensor.Closed;
+          supervisor invariant .South.Downstream.Paddles.West.Actuator.c_open needs not Sensor.Open;
+          supervisor invariant .South.Downstream.Paddles.West.Actuator.c_close needs not Sensor.Closed;
         end
       end
       group EnteringTLs:
@@ -5286,114 +5286,114 @@ group sup:
       location UpstreamLeavingTLGreen:
         edge .South.Commands.Deactivate goto NoCommand;
     end
-    requirement invariant not Downstream.Paddles.Closed disables .South.Upstream.Paddles.East.Actuator.c_open;
-    requirement invariant not Downstream.Paddles.Closed disables .South.Upstream.Paddles.West.Actuator.c_open;
-    requirement invariant not Upstream.Paddles.Closed disables .South.Downstream.Paddles.East.Actuator.c_open;
-    requirement invariant not Upstream.Paddles.Closed disables .South.Downstream.Paddles.West.Actuator.c_open;
-    requirement invariant not Downstream.Gates.Closed disables .South.Upstream.Paddles.East.Actuator.c_open;
-    requirement invariant not Downstream.Gates.Closed disables .South.Upstream.Paddles.West.Actuator.c_open;
-    requirement invariant not Upstream.Gates.Closed disables .South.Downstream.Paddles.East.Actuator.c_open;
-    requirement invariant not Upstream.Gates.Closed disables .South.Downstream.Paddles.West.Actuator.c_open;
-    requirement invariant Downstream.EqualWaterSensor.Unequal disables .South.Downstream.Gates.East.Actuator.c_open;
-    requirement invariant Downstream.EqualWaterSensor.Unequal disables .South.Downstream.Gates.West.Actuator.c_open;
-    requirement invariant Upstream.EqualWaterSensor.Unequal disables .South.Upstream.Gates.East.Actuator.c_open;
-    requirement invariant Upstream.EqualWaterSensor.Unequal disables .South.Upstream.Gates.West.Actuator.c_open;
-    requirement invariant not Downstream.Paddles.Closed disables .South.Upstream.Gates.East.Actuator.c_open;
-    requirement invariant not Downstream.Paddles.Closed disables .South.Upstream.Gates.West.Actuator.c_open;
-    requirement invariant not Upstream.Paddles.Closed disables .South.Downstream.Gates.East.Actuator.c_open;
-    requirement invariant not Upstream.Paddles.Closed disables .South.Downstream.Gates.West.Actuator.c_open;
-    requirement invariant not Downstream.Gates.Closed disables .South.Upstream.Gates.East.Actuator.c_open;
-    requirement invariant not Downstream.Gates.Closed disables .South.Upstream.Gates.West.Actuator.c_open;
-    requirement invariant not Upstream.Gates.Closed disables .South.Downstream.Gates.East.Actuator.c_open;
-    requirement invariant not Upstream.Gates.Closed disables .South.Downstream.Gates.West.Actuator.c_open;
-    requirement invariant not Downstream.LeavingTLs.Red disables .South.Downstream.EnteringTLs.East.Actuator.c_g;
-    requirement invariant not Downstream.LeavingTLs.Red disables .South.Downstream.EnteringTLs.West.Actuator.c_g;
-    requirement invariant not Upstream.LeavingTLs.Red disables .South.Upstream.EnteringTLs.East.Actuator.c_g;
-    requirement invariant not Upstream.LeavingTLs.Red disables .South.Upstream.EnteringTLs.West.Actuator.c_g;
-    requirement invariant not Downstream.Gates.Open disables .South.Downstream.EnteringTLs.East.Actuator.c_g;
-    requirement invariant not Downstream.Gates.Open disables .South.Downstream.EnteringTLs.West.Actuator.c_g;
-    requirement invariant not Upstream.Gates.Open disables .South.Upstream.EnteringTLs.East.Actuator.c_g;
-    requirement invariant not Upstream.Gates.Open disables .South.Upstream.EnteringTLs.West.Actuator.c_g;
-    requirement invariant not Downstream.EnteringTLs.RedOrRedRed disables .South.Downstream.Gates.East.Actuator.c_close;
-    requirement invariant not Downstream.EnteringTLs.RedOrRedRed disables .South.Downstream.Gates.West.Actuator.c_close;
-    requirement invariant not Upstream.EnteringTLs.RedOrRedRed disables .South.Upstream.Gates.East.Actuator.c_close;
-    requirement invariant not Upstream.EnteringTLs.RedOrRedRed disables .South.Upstream.Gates.West.Actuator.c_close;
-    requirement invariant not Downstream.LeavingTLs.Red disables .South.Downstream.Gates.East.Actuator.c_close;
-    requirement invariant not Downstream.LeavingTLs.Red disables .South.Downstream.Gates.West.Actuator.c_close;
-    requirement invariant not Upstream.LeavingTLs.Red disables .South.Upstream.Gates.East.Actuator.c_close;
-    requirement invariant not Upstream.LeavingTLs.Red disables .South.Upstream.Gates.West.Actuator.c_close;
-    requirement invariant EmergencyStop.Active disables .South.Downstream.Gates.East.Actuator.c_open;
-    requirement invariant EmergencyStop.Active disables .South.Downstream.Gates.East.Actuator.c_close;
-    requirement invariant EmergencyStop.Active disables .South.Downstream.Gates.West.Actuator.c_open;
-    requirement invariant EmergencyStop.Active disables .South.Downstream.Gates.West.Actuator.c_close;
-    requirement invariant EmergencyStop.Active disables .South.Upstream.Gates.East.Actuator.c_open;
-    requirement invariant EmergencyStop.Active disables .South.Upstream.Gates.East.Actuator.c_close;
-    requirement invariant EmergencyStop.Active disables .South.Upstream.Gates.West.Actuator.c_open;
-    requirement invariant EmergencyStop.Active disables .South.Upstream.Gates.West.Actuator.c_close;
-    requirement invariant EmergencyStop.Active disables .South.Downstream.Paddles.East.Actuator.c_open;
-    requirement invariant EmergencyStop.Active disables .South.Downstream.Paddles.East.Actuator.c_close;
-    requirement invariant EmergencyStop.Active disables .South.Downstream.Paddles.West.Actuator.c_open;
-    requirement invariant EmergencyStop.Active disables .South.Downstream.Paddles.West.Actuator.c_close;
-    requirement invariant EmergencyStop.Active disables .South.Upstream.Paddles.East.Actuator.c_open;
-    requirement invariant EmergencyStop.Active disables .South.Upstream.Paddles.East.Actuator.c_close;
-    requirement invariant EmergencyStop.Active disables .South.Upstream.Paddles.West.Actuator.c_open;
-    requirement invariant EmergencyStop.Active disables .South.Upstream.Paddles.West.Actuator.c_close;
-    requirement invariant .South.Downstream.Gates.East.Actuator.c_emergencyStop needs EmergencyStop.Active or Commands.DownstreamGateStop;
-    requirement invariant .South.Downstream.Gates.West.Actuator.c_emergencyStop needs EmergencyStop.Active or Commands.DownstreamGateStop;
-    requirement invariant .South.Upstream.Gates.East.Actuator.c_emergencyStop needs EmergencyStop.Active or Commands.UpstreamGateStop;
-    requirement invariant .South.Upstream.Gates.West.Actuator.c_emergencyStop needs EmergencyStop.Active or Commands.UpstreamGateStop;
-    requirement invariant .South.Downstream.Paddles.East.Actuator.c_emergencyStop needs EmergencyStop.Active or Commands.DownstreamPaddleStop;
-    requirement invariant .South.Downstream.Paddles.West.Actuator.c_emergencyStop needs EmergencyStop.Active or Commands.DownstreamPaddleStop;
-    requirement invariant .South.Upstream.Paddles.East.Actuator.c_emergencyStop needs EmergencyStop.Active or Commands.UpstreamPaddleStop;
-    requirement invariant .South.Upstream.Paddles.West.Actuator.c_emergencyStop needs EmergencyStop.Active or Commands.UpstreamPaddleStop;
-    requirement invariant not Downstream.EnteringTLs.RedOrRedRed disables .South.Downstream.LeavingTLs.East.Actuator.c_g;
-    requirement invariant not Downstream.EnteringTLs.RedOrRedRed disables .South.Downstream.LeavingTLs.West.Actuator.c_g;
-    requirement invariant not Upstream.EnteringTLs.RedOrRedRed disables .South.Upstream.LeavingTLs.East.Actuator.c_g;
-    requirement invariant not Upstream.EnteringTLs.RedOrRedRed disables .South.Upstream.LeavingTLs.West.Actuator.c_g;
-    requirement invariant not Downstream.Gates.Open disables .South.Downstream.LeavingTLs.East.Actuator.c_g;
-    requirement invariant not Downstream.Gates.Open disables .South.Downstream.LeavingTLs.West.Actuator.c_g;
-    requirement invariant not Upstream.Gates.Open disables .South.Upstream.LeavingTLs.East.Actuator.c_g;
-    requirement invariant not Upstream.Gates.Open disables .South.Upstream.LeavingTLs.West.Actuator.c_g;
-    requirement invariant .South.Downstream.Gates.East.Actuator.c_open needs Commands.DownstreamGateOpen;
-    requirement invariant .South.Downstream.Gates.West.Actuator.c_open needs Commands.DownstreamGateOpen;
-    requirement invariant .South.Upstream.Gates.East.Actuator.c_open needs Commands.UpstreamGateOpen;
-    requirement invariant .South.Upstream.Gates.West.Actuator.c_open needs Commands.UpstreamGateOpen;
-    requirement invariant .South.Downstream.Gates.East.Actuator.c_close needs Commands.DownstreamGateClose;
-    requirement invariant .South.Downstream.Gates.West.Actuator.c_close needs Commands.DownstreamGateClose;
-    requirement invariant .South.Upstream.Gates.East.Actuator.c_close needs Commands.UpstreamGateClose;
-    requirement invariant .South.Upstream.Gates.West.Actuator.c_close needs Commands.UpstreamGateClose;
-    requirement invariant .South.Downstream.Paddles.East.Actuator.c_open needs Commands.DownstreamPaddleOpen;
-    requirement invariant .South.Downstream.Paddles.West.Actuator.c_open needs Commands.DownstreamPaddleOpen;
-    requirement invariant .South.Upstream.Paddles.East.Actuator.c_open needs Commands.UpstreamPaddleOpen;
-    requirement invariant .South.Upstream.Paddles.West.Actuator.c_open needs Commands.UpstreamPaddleOpen;
-    requirement invariant .South.Downstream.Paddles.East.Actuator.c_close needs Commands.DownstreamPaddleClose;
-    requirement invariant .South.Downstream.Paddles.West.Actuator.c_close needs Commands.DownstreamPaddleClose;
-    requirement invariant .South.Upstream.Paddles.East.Actuator.c_close needs Commands.UpstreamPaddleClose;
-    requirement invariant .South.Upstream.Paddles.West.Actuator.c_close needs Commands.UpstreamPaddleClose;
-    requirement invariant .South.Downstream.EnteringTLs.East.Actuator.c_rr needs Commands.DownstreamEnteringTLRedRed;
-    requirement invariant .South.Downstream.EnteringTLs.West.Actuator.c_rr needs Commands.DownstreamEnteringTLRedRed;
-    requirement invariant .South.Upstream.EnteringTLs.East.Actuator.c_rr needs Commands.UpstreamEnteringTLRedRed;
-    requirement invariant .South.Upstream.EnteringTLs.West.Actuator.c_rr needs Commands.UpstreamEnteringTLRedRed;
-    requirement invariant .South.Downstream.EnteringTLs.East.Actuator.c_r needs Commands.DownstreamEnteringTLRed;
-    requirement invariant .South.Downstream.EnteringTLs.West.Actuator.c_r needs Commands.DownstreamEnteringTLRed;
-    requirement invariant .South.Upstream.EnteringTLs.East.Actuator.c_r needs Commands.UpstreamEnteringTLRed;
-    requirement invariant .South.Upstream.EnteringTLs.West.Actuator.c_r needs Commands.UpstreamEnteringTLRed;
-    requirement invariant .South.Downstream.EnteringTLs.East.Actuator.c_rg needs Commands.DownstreamEnteringTLRedGreen;
-    requirement invariant .South.Downstream.EnteringTLs.West.Actuator.c_rg needs Commands.DownstreamEnteringTLRedGreen;
-    requirement invariant .South.Upstream.EnteringTLs.East.Actuator.c_rg needs Commands.UpstreamEnteringTLRedGreen;
-    requirement invariant .South.Upstream.EnteringTLs.West.Actuator.c_rg needs Commands.UpstreamEnteringTLRedGreen;
-    requirement invariant .South.Downstream.EnteringTLs.East.Actuator.c_g needs Commands.DownstreamEnteringTLGreen;
-    requirement invariant .South.Downstream.EnteringTLs.West.Actuator.c_g needs Commands.DownstreamEnteringTLGreen;
-    requirement invariant .South.Upstream.EnteringTLs.East.Actuator.c_g needs Commands.UpstreamEnteringTLGreen;
-    requirement invariant .South.Upstream.EnteringTLs.West.Actuator.c_g needs Commands.UpstreamEnteringTLGreen;
-    requirement invariant .South.Downstream.LeavingTLs.East.Actuator.c_r needs Commands.DownstreamLeavingTLRed;
-    requirement invariant .South.Downstream.LeavingTLs.West.Actuator.c_r needs Commands.DownstreamLeavingTLRed;
-    requirement invariant .South.Upstream.LeavingTLs.East.Actuator.c_r needs Commands.UpstreamLeavingTLRed;
-    requirement invariant .South.Upstream.LeavingTLs.West.Actuator.c_r needs Commands.UpstreamLeavingTLRed;
-    requirement invariant .South.Downstream.LeavingTLs.East.Actuator.c_g needs Commands.DownstreamLeavingTLGreen;
-    requirement invariant .South.Downstream.LeavingTLs.West.Actuator.c_g needs Commands.DownstreamLeavingTLGreen;
-    requirement invariant .South.Upstream.LeavingTLs.East.Actuator.c_g needs Commands.UpstreamLeavingTLGreen;
-    requirement invariant .South.Upstream.LeavingTLs.West.Actuator.c_g needs Commands.UpstreamLeavingTLGreen;
+    supervisor invariant not Downstream.Paddles.Closed disables .South.Upstream.Paddles.East.Actuator.c_open;
+    supervisor invariant not Downstream.Paddles.Closed disables .South.Upstream.Paddles.West.Actuator.c_open;
+    supervisor invariant not Upstream.Paddles.Closed disables .South.Downstream.Paddles.East.Actuator.c_open;
+    supervisor invariant not Upstream.Paddles.Closed disables .South.Downstream.Paddles.West.Actuator.c_open;
+    supervisor invariant not Downstream.Gates.Closed disables .South.Upstream.Paddles.East.Actuator.c_open;
+    supervisor invariant not Downstream.Gates.Closed disables .South.Upstream.Paddles.West.Actuator.c_open;
+    supervisor invariant not Upstream.Gates.Closed disables .South.Downstream.Paddles.East.Actuator.c_open;
+    supervisor invariant not Upstream.Gates.Closed disables .South.Downstream.Paddles.West.Actuator.c_open;
+    supervisor invariant Downstream.EqualWaterSensor.Unequal disables .South.Downstream.Gates.East.Actuator.c_open;
+    supervisor invariant Downstream.EqualWaterSensor.Unequal disables .South.Downstream.Gates.West.Actuator.c_open;
+    supervisor invariant Upstream.EqualWaterSensor.Unequal disables .South.Upstream.Gates.East.Actuator.c_open;
+    supervisor invariant Upstream.EqualWaterSensor.Unequal disables .South.Upstream.Gates.West.Actuator.c_open;
+    supervisor invariant not Downstream.Paddles.Closed disables .South.Upstream.Gates.East.Actuator.c_open;
+    supervisor invariant not Downstream.Paddles.Closed disables .South.Upstream.Gates.West.Actuator.c_open;
+    supervisor invariant not Upstream.Paddles.Closed disables .South.Downstream.Gates.East.Actuator.c_open;
+    supervisor invariant not Upstream.Paddles.Closed disables .South.Downstream.Gates.West.Actuator.c_open;
+    supervisor invariant not Downstream.Gates.Closed disables .South.Upstream.Gates.East.Actuator.c_open;
+    supervisor invariant not Downstream.Gates.Closed disables .South.Upstream.Gates.West.Actuator.c_open;
+    supervisor invariant not Upstream.Gates.Closed disables .South.Downstream.Gates.East.Actuator.c_open;
+    supervisor invariant not Upstream.Gates.Closed disables .South.Downstream.Gates.West.Actuator.c_open;
+    supervisor invariant not Downstream.LeavingTLs.Red disables .South.Downstream.EnteringTLs.East.Actuator.c_g;
+    supervisor invariant not Downstream.LeavingTLs.Red disables .South.Downstream.EnteringTLs.West.Actuator.c_g;
+    supervisor invariant not Upstream.LeavingTLs.Red disables .South.Upstream.EnteringTLs.East.Actuator.c_g;
+    supervisor invariant not Upstream.LeavingTLs.Red disables .South.Upstream.EnteringTLs.West.Actuator.c_g;
+    supervisor invariant not Downstream.Gates.Open disables .South.Downstream.EnteringTLs.East.Actuator.c_g;
+    supervisor invariant not Downstream.Gates.Open disables .South.Downstream.EnteringTLs.West.Actuator.c_g;
+    supervisor invariant not Upstream.Gates.Open disables .South.Upstream.EnteringTLs.East.Actuator.c_g;
+    supervisor invariant not Upstream.Gates.Open disables .South.Upstream.EnteringTLs.West.Actuator.c_g;
+    supervisor invariant not Downstream.EnteringTLs.RedOrRedRed disables .South.Downstream.Gates.East.Actuator.c_close;
+    supervisor invariant not Downstream.EnteringTLs.RedOrRedRed disables .South.Downstream.Gates.West.Actuator.c_close;
+    supervisor invariant not Upstream.EnteringTLs.RedOrRedRed disables .South.Upstream.Gates.East.Actuator.c_close;
+    supervisor invariant not Upstream.EnteringTLs.RedOrRedRed disables .South.Upstream.Gates.West.Actuator.c_close;
+    supervisor invariant not Downstream.LeavingTLs.Red disables .South.Downstream.Gates.East.Actuator.c_close;
+    supervisor invariant not Downstream.LeavingTLs.Red disables .South.Downstream.Gates.West.Actuator.c_close;
+    supervisor invariant not Upstream.LeavingTLs.Red disables .South.Upstream.Gates.East.Actuator.c_close;
+    supervisor invariant not Upstream.LeavingTLs.Red disables .South.Upstream.Gates.West.Actuator.c_close;
+    supervisor invariant EmergencyStop.Active disables .South.Downstream.Gates.East.Actuator.c_open;
+    supervisor invariant EmergencyStop.Active disables .South.Downstream.Gates.East.Actuator.c_close;
+    supervisor invariant EmergencyStop.Active disables .South.Downstream.Gates.West.Actuator.c_open;
+    supervisor invariant EmergencyStop.Active disables .South.Downstream.Gates.West.Actuator.c_close;
+    supervisor invariant EmergencyStop.Active disables .South.Upstream.Gates.East.Actuator.c_open;
+    supervisor invariant EmergencyStop.Active disables .South.Upstream.Gates.East.Actuator.c_close;
+    supervisor invariant EmergencyStop.Active disables .South.Upstream.Gates.West.Actuator.c_open;
+    supervisor invariant EmergencyStop.Active disables .South.Upstream.Gates.West.Actuator.c_close;
+    supervisor invariant EmergencyStop.Active disables .South.Downstream.Paddles.East.Actuator.c_open;
+    supervisor invariant EmergencyStop.Active disables .South.Downstream.Paddles.East.Actuator.c_close;
+    supervisor invariant EmergencyStop.Active disables .South.Downstream.Paddles.West.Actuator.c_open;
+    supervisor invariant EmergencyStop.Active disables .South.Downstream.Paddles.West.Actuator.c_close;
+    supervisor invariant EmergencyStop.Active disables .South.Upstream.Paddles.East.Actuator.c_open;
+    supervisor invariant EmergencyStop.Active disables .South.Upstream.Paddles.East.Actuator.c_close;
+    supervisor invariant EmergencyStop.Active disables .South.Upstream.Paddles.West.Actuator.c_open;
+    supervisor invariant EmergencyStop.Active disables .South.Upstream.Paddles.West.Actuator.c_close;
+    supervisor invariant .South.Downstream.Gates.East.Actuator.c_emergencyStop needs EmergencyStop.Active or Commands.DownstreamGateStop;
+    supervisor invariant .South.Downstream.Gates.West.Actuator.c_emergencyStop needs EmergencyStop.Active or Commands.DownstreamGateStop;
+    supervisor invariant .South.Upstream.Gates.East.Actuator.c_emergencyStop needs EmergencyStop.Active or Commands.UpstreamGateStop;
+    supervisor invariant .South.Upstream.Gates.West.Actuator.c_emergencyStop needs EmergencyStop.Active or Commands.UpstreamGateStop;
+    supervisor invariant .South.Downstream.Paddles.East.Actuator.c_emergencyStop needs EmergencyStop.Active or Commands.DownstreamPaddleStop;
+    supervisor invariant .South.Downstream.Paddles.West.Actuator.c_emergencyStop needs EmergencyStop.Active or Commands.DownstreamPaddleStop;
+    supervisor invariant .South.Upstream.Paddles.East.Actuator.c_emergencyStop needs EmergencyStop.Active or Commands.UpstreamPaddleStop;
+    supervisor invariant .South.Upstream.Paddles.West.Actuator.c_emergencyStop needs EmergencyStop.Active or Commands.UpstreamPaddleStop;
+    supervisor invariant not Downstream.EnteringTLs.RedOrRedRed disables .South.Downstream.LeavingTLs.East.Actuator.c_g;
+    supervisor invariant not Downstream.EnteringTLs.RedOrRedRed disables .South.Downstream.LeavingTLs.West.Actuator.c_g;
+    supervisor invariant not Upstream.EnteringTLs.RedOrRedRed disables .South.Upstream.LeavingTLs.East.Actuator.c_g;
+    supervisor invariant not Upstream.EnteringTLs.RedOrRedRed disables .South.Upstream.LeavingTLs.West.Actuator.c_g;
+    supervisor invariant not Downstream.Gates.Open disables .South.Downstream.LeavingTLs.East.Actuator.c_g;
+    supervisor invariant not Downstream.Gates.Open disables .South.Downstream.LeavingTLs.West.Actuator.c_g;
+    supervisor invariant not Upstream.Gates.Open disables .South.Upstream.LeavingTLs.East.Actuator.c_g;
+    supervisor invariant not Upstream.Gates.Open disables .South.Upstream.LeavingTLs.West.Actuator.c_g;
+    supervisor invariant .South.Downstream.Gates.East.Actuator.c_open needs Commands.DownstreamGateOpen;
+    supervisor invariant .South.Downstream.Gates.West.Actuator.c_open needs Commands.DownstreamGateOpen;
+    supervisor invariant .South.Upstream.Gates.East.Actuator.c_open needs Commands.UpstreamGateOpen;
+    supervisor invariant .South.Upstream.Gates.West.Actuator.c_open needs Commands.UpstreamGateOpen;
+    supervisor invariant .South.Downstream.Gates.East.Actuator.c_close needs Commands.DownstreamGateClose;
+    supervisor invariant .South.Downstream.Gates.West.Actuator.c_close needs Commands.DownstreamGateClose;
+    supervisor invariant .South.Upstream.Gates.East.Actuator.c_close needs Commands.UpstreamGateClose;
+    supervisor invariant .South.Upstream.Gates.West.Actuator.c_close needs Commands.UpstreamGateClose;
+    supervisor invariant .South.Downstream.Paddles.East.Actuator.c_open needs Commands.DownstreamPaddleOpen;
+    supervisor invariant .South.Downstream.Paddles.West.Actuator.c_open needs Commands.DownstreamPaddleOpen;
+    supervisor invariant .South.Upstream.Paddles.East.Actuator.c_open needs Commands.UpstreamPaddleOpen;
+    supervisor invariant .South.Upstream.Paddles.West.Actuator.c_open needs Commands.UpstreamPaddleOpen;
+    supervisor invariant .South.Downstream.Paddles.East.Actuator.c_close needs Commands.DownstreamPaddleClose;
+    supervisor invariant .South.Downstream.Paddles.West.Actuator.c_close needs Commands.DownstreamPaddleClose;
+    supervisor invariant .South.Upstream.Paddles.East.Actuator.c_close needs Commands.UpstreamPaddleClose;
+    supervisor invariant .South.Upstream.Paddles.West.Actuator.c_close needs Commands.UpstreamPaddleClose;
+    supervisor invariant .South.Downstream.EnteringTLs.East.Actuator.c_rr needs Commands.DownstreamEnteringTLRedRed;
+    supervisor invariant .South.Downstream.EnteringTLs.West.Actuator.c_rr needs Commands.DownstreamEnteringTLRedRed;
+    supervisor invariant .South.Upstream.EnteringTLs.East.Actuator.c_rr needs Commands.UpstreamEnteringTLRedRed;
+    supervisor invariant .South.Upstream.EnteringTLs.West.Actuator.c_rr needs Commands.UpstreamEnteringTLRedRed;
+    supervisor invariant .South.Downstream.EnteringTLs.East.Actuator.c_r needs Commands.DownstreamEnteringTLRed;
+    supervisor invariant .South.Downstream.EnteringTLs.West.Actuator.c_r needs Commands.DownstreamEnteringTLRed;
+    supervisor invariant .South.Upstream.EnteringTLs.East.Actuator.c_r needs Commands.UpstreamEnteringTLRed;
+    supervisor invariant .South.Upstream.EnteringTLs.West.Actuator.c_r needs Commands.UpstreamEnteringTLRed;
+    supervisor invariant .South.Downstream.EnteringTLs.East.Actuator.c_rg needs Commands.DownstreamEnteringTLRedGreen;
+    supervisor invariant .South.Downstream.EnteringTLs.West.Actuator.c_rg needs Commands.DownstreamEnteringTLRedGreen;
+    supervisor invariant .South.Upstream.EnteringTLs.East.Actuator.c_rg needs Commands.UpstreamEnteringTLRedGreen;
+    supervisor invariant .South.Upstream.EnteringTLs.West.Actuator.c_rg needs Commands.UpstreamEnteringTLRedGreen;
+    supervisor invariant .South.Downstream.EnteringTLs.East.Actuator.c_g needs Commands.DownstreamEnteringTLGreen;
+    supervisor invariant .South.Downstream.EnteringTLs.West.Actuator.c_g needs Commands.DownstreamEnteringTLGreen;
+    supervisor invariant .South.Upstream.EnteringTLs.East.Actuator.c_g needs Commands.UpstreamEnteringTLGreen;
+    supervisor invariant .South.Upstream.EnteringTLs.West.Actuator.c_g needs Commands.UpstreamEnteringTLGreen;
+    supervisor invariant .South.Downstream.LeavingTLs.East.Actuator.c_r needs Commands.DownstreamLeavingTLRed;
+    supervisor invariant .South.Downstream.LeavingTLs.West.Actuator.c_r needs Commands.DownstreamLeavingTLRed;
+    supervisor invariant .South.Upstream.LeavingTLs.East.Actuator.c_r needs Commands.UpstreamLeavingTLRed;
+    supervisor invariant .South.Upstream.LeavingTLs.West.Actuator.c_r needs Commands.UpstreamLeavingTLRed;
+    supervisor invariant .South.Downstream.LeavingTLs.East.Actuator.c_g needs Commands.DownstreamLeavingTLGreen;
+    supervisor invariant .South.Downstream.LeavingTLs.West.Actuator.c_g needs Commands.DownstreamLeavingTLGreen;
+    supervisor invariant .South.Upstream.LeavingTLs.East.Actuator.c_g needs Commands.UpstreamLeavingTLGreen;
+    supervisor invariant .South.Upstream.LeavingTLs.West.Actuator.c_g needs Commands.UpstreamLeavingTLGreen;
   end
   group Barrier:
     group Downstream:
@@ -5650,10 +5650,10 @@ group sup:
           edge .Barrier.Barrier.Sensor.u_open_on, .Barrier.Barrier.Sensor.u_closed_off when Actuator.Opening;
           edge .Barrier.Barrier.Sensor.u_closed_on, .Barrier.Barrier.Sensor.u_open_off when Actuator.Closing;
       end
-      requirement invariant .Barrier.Barrier.Actuator.c_endStopOpening needs Sensor.Open;
-      requirement invariant .Barrier.Barrier.Actuator.c_endStopClosing needs Sensor.Closed;
-      requirement invariant .Barrier.Barrier.Actuator.c_open needs not Sensor.Open;
-      requirement invariant .Barrier.Barrier.Actuator.c_close needs not Sensor.Closed;
+      supervisor invariant .Barrier.Barrier.Actuator.c_endStopOpening needs Sensor.Open;
+      supervisor invariant .Barrier.Barrier.Actuator.c_endStopClosing needs Sensor.Closed;
+      supervisor invariant .Barrier.Barrier.Actuator.c_open needs not Sensor.Open;
+      supervisor invariant .Barrier.Barrier.Actuator.c_close needs not Sensor.Closed;
     end
     plant automaton EmergencyStop:
       location Inactive:
@@ -5690,22 +5690,22 @@ group sup:
       location UpstreamTLGreen:
         edge .Barrier.Commands.Deactivate goto NoCommand;
     end
-    requirement invariant .Barrier.Barrier.Actuator.c_close needs Downstream.TLs.Red and Upstream.TLs.Red;
-    requirement invariant .Barrier.Downstream.TLs.East.Actuator.c_g needs Barrier.Open;
-    requirement invariant .Barrier.Downstream.TLs.West.Actuator.c_g needs Barrier.Open;
-    requirement invariant .Barrier.Upstream.TLs.East.Actuator.c_g needs Barrier.Open;
-    requirement invariant .Barrier.Upstream.TLs.West.Actuator.c_g needs Barrier.Open;
-    requirement invariant .Barrier.Downstream.TLs.East.Actuator.c_g needs Commands.DownstreamTLGreen;
-    requirement invariant .Barrier.Downstream.TLs.West.Actuator.c_g needs Commands.DownstreamTLGreen;
-    requirement invariant .Barrier.Downstream.TLs.East.Actuator.c_r needs Commands.DownstreamTLRed;
-    requirement invariant .Barrier.Downstream.TLs.West.Actuator.c_r needs Commands.DownstreamTLRed;
-    requirement invariant .Barrier.Upstream.TLs.East.Actuator.c_g needs Commands.UpstreamTLGreen;
-    requirement invariant .Barrier.Upstream.TLs.West.Actuator.c_g needs Commands.UpstreamTLGreen;
-    requirement invariant .Barrier.Upstream.TLs.East.Actuator.c_r needs Commands.UpstreamTLRed;
-    requirement invariant .Barrier.Upstream.TLs.West.Actuator.c_r needs Commands.UpstreamTLRed;
-    requirement invariant .Barrier.Barrier.Actuator.c_open needs Commands.BarrierOpen;
-    requirement invariant .Barrier.Barrier.Actuator.c_close needs Commands.BarrierClose;
-    requirement invariant .Barrier.Barrier.Actuator.c_emergencyStop needs EmergencyStop.Active or Commands.BarrierStop;
+    supervisor invariant .Barrier.Barrier.Actuator.c_close needs Downstream.TLs.Red and Upstream.TLs.Red;
+    supervisor invariant .Barrier.Downstream.TLs.East.Actuator.c_g needs Barrier.Open;
+    supervisor invariant .Barrier.Downstream.TLs.West.Actuator.c_g needs Barrier.Open;
+    supervisor invariant .Barrier.Upstream.TLs.East.Actuator.c_g needs Barrier.Open;
+    supervisor invariant .Barrier.Upstream.TLs.West.Actuator.c_g needs Barrier.Open;
+    supervisor invariant .Barrier.Downstream.TLs.East.Actuator.c_g needs Commands.DownstreamTLGreen;
+    supervisor invariant .Barrier.Downstream.TLs.West.Actuator.c_g needs Commands.DownstreamTLGreen;
+    supervisor invariant .Barrier.Downstream.TLs.East.Actuator.c_r needs Commands.DownstreamTLRed;
+    supervisor invariant .Barrier.Downstream.TLs.West.Actuator.c_r needs Commands.DownstreamTLRed;
+    supervisor invariant .Barrier.Upstream.TLs.East.Actuator.c_g needs Commands.UpstreamTLGreen;
+    supervisor invariant .Barrier.Upstream.TLs.West.Actuator.c_g needs Commands.UpstreamTLGreen;
+    supervisor invariant .Barrier.Upstream.TLs.East.Actuator.c_r needs Commands.UpstreamTLRed;
+    supervisor invariant .Barrier.Upstream.TLs.West.Actuator.c_r needs Commands.UpstreamTLRed;
+    supervisor invariant .Barrier.Barrier.Actuator.c_open needs Commands.BarrierOpen;
+    supervisor invariant .Barrier.Barrier.Actuator.c_close needs Commands.BarrierClose;
+    supervisor invariant .Barrier.Barrier.Actuator.c_emergencyStop needs EmergencyStop.Active or Commands.BarrierStop;
   end
   supervisor automaton sup:
     alphabet .North.Upstream.Gates.East.Actuator.c_open, .North.Upstream.Gates.East.Actuator.c_close, .North.Upstream.Gates.East.Actuator.c_emergencyStop, .North.Upstream.Gates.East.Actuator.c_endStopOpening, .North.Upstream.Gates.East.Actuator.c_endStopClosing, .North.Upstream.Gates.West.Actuator.c_open, .North.Upstream.Gates.West.Actuator.c_close, .North.Upstream.Gates.West.Actuator.c_emergencyStop, .North.Upstream.Gates.West.Actuator.c_endStopOpening, .North.Upstream.Gates.West.Actuator.c_endStopClosing, .North.Upstream.Paddles.East.Actuator.c_open, .North.Upstream.Paddles.East.Actuator.c_close, .North.Upstream.Paddles.East.Actuator.c_emergencyStop, .North.Upstream.Paddles.East.Actuator.c_endStopOpening, .North.Upstream.Paddles.East.Actuator.c_endStopClosing, .North.Upstream.Paddles.West.Actuator.c_open, .North.Upstream.Paddles.West.Actuator.c_close, .North.Upstream.Paddles.West.Actuator.c_emergencyStop, .North.Upstream.Paddles.West.Actuator.c_endStopOpening, .North.Upstream.Paddles.West.Actuator.c_endStopClosing, .North.Upstream.EnteringTLs.East.Actuator.c_r, .North.Upstream.EnteringTLs.East.Actuator.c_rr, .North.Upstream.EnteringTLs.East.Actuator.c_rg, .North.Upstream.EnteringTLs.East.Actuator.c_g, .North.Upstream.EnteringTLs.West.Actuator.c_r, .North.Upstream.EnteringTLs.West.Actuator.c_rr, .North.Upstream.EnteringTLs.West.Actuator.c_rg, .North.Upstream.EnteringTLs.West.Actuator.c_g, .North.Upstream.LeavingTLs.East.Actuator.c_g, .North.Upstream.LeavingTLs.East.Actuator.c_r, .North.Upstream.LeavingTLs.West.Actuator.c_g, .North.Upstream.LeavingTLs.West.Actuator.c_r, .North.Downstream.Gates.East.Actuator.c_open, .North.Downstream.Gates.East.Actuator.c_close, .North.Downstream.Gates.East.Actuator.c_emergencyStop, .North.Downstream.Gates.East.Actuator.c_endStopOpening, .North.Downstream.Gates.East.Actuator.c_endStopClosing, .North.Downstream.Gates.West.Actuator.c_open, .North.Downstream.Gates.West.Actuator.c_close, .North.Downstream.Gates.West.Actuator.c_emergencyStop, .North.Downstream.Gates.West.Actuator.c_endStopOpening, .North.Downstream.Gates.West.Actuator.c_endStopClosing, .North.Downstream.Paddles.East.Actuator.c_open, .North.Downstream.Paddles.East.Actuator.c_close, .North.Downstream.Paddles.East.Actuator.c_emergencyStop, .North.Downstream.Paddles.East.Actuator.c_endStopOpening, .North.Downstream.Paddles.East.Actuator.c_endStopClosing, .North.Downstream.Paddles.West.Actuator.c_open, .North.Downstream.Paddles.West.Actuator.c_close, .North.Downstream.Paddles.West.Actuator.c_emergencyStop, .North.Downstream.Paddles.West.Actuator.c_endStopOpening, .North.Downstream.Paddles.West.Actuator.c_endStopClosing, .North.Downstream.EnteringTLs.East.Actuator.c_r, .North.Downstream.EnteringTLs.East.Actuator.c_rr, .North.Downstream.EnteringTLs.East.Actuator.c_rg, .North.Downstream.EnteringTLs.East.Actuator.c_g, .North.Downstream.EnteringTLs.West.Actuator.c_r, .North.Downstream.EnteringTLs.West.Actuator.c_rr, .North.Downstream.EnteringTLs.West.Actuator.c_rg, .North.Downstream.EnteringTLs.West.Actuator.c_g, .North.Downstream.LeavingTLs.East.Actuator.c_g, .North.Downstream.LeavingTLs.East.Actuator.c_r, .North.Downstream.LeavingTLs.West.Actuator.c_g, .North.Downstream.LeavingTLs.West.Actuator.c_r, .South.Upstream.Gates.East.Actuator.c_open, .South.Upstream.Gates.East.Actuator.c_close, .South.Upstream.Gates.East.Actuator.c_emergencyStop, .South.Upstream.Gates.East.Actuator.c_endStopOpening, .South.Upstream.Gates.East.Actuator.c_endStopClosing, .South.Upstream.Gates.West.Actuator.c_open, .South.Upstream.Gates.West.Actuator.c_close, .South.Upstream.Gates.West.Actuator.c_emergencyStop, .South.Upstream.Gates.West.Actuator.c_endStopOpening, .South.Upstream.Gates.West.Actuator.c_endStopClosing, .South.Upstream.Paddles.East.Actuator.c_open, .South.Upstream.Paddles.East.Actuator.c_close, .South.Upstream.Paddles.East.Actuator.c_emergencyStop, .South.Upstream.Paddles.East.Actuator.c_endStopOpening, .South.Upstream.Paddles.East.Actuator.c_endStopClosing, .South.Upstream.Paddles.West.Actuator.c_open, .South.Upstream.Paddles.West.Actuator.c_close, .South.Upstream.Paddles.West.Actuator.c_emergencyStop, .South.Upstream.Paddles.West.Actuator.c_endStopOpening, .South.Upstream.Paddles.West.Actuator.c_endStopClosing, .South.Upstream.EnteringTLs.East.Actuator.c_r, .South.Upstream.EnteringTLs.East.Actuator.c_rr, .South.Upstream.EnteringTLs.East.Actuator.c_rg, .South.Upstream.EnteringTLs.East.Actuator.c_g, .South.Upstream.EnteringTLs.West.Actuator.c_r, .South.Upstream.EnteringTLs.West.Actuator.c_rr, .South.Upstream.EnteringTLs.West.Actuator.c_rg, .South.Upstream.EnteringTLs.West.Actuator.c_g, .South.Upstream.LeavingTLs.East.Actuator.c_g, .South.Upstream.LeavingTLs.East.Actuator.c_r, .South.Upstream.LeavingTLs.West.Actuator.c_g, .South.Upstream.LeavingTLs.West.Actuator.c_r, .South.Downstream.Gates.East.Actuator.c_open, .South.Downstream.Gates.East.Actuator.c_close, .South.Downstream.Gates.East.Actuator.c_emergencyStop, .South.Downstream.Gates.East.Actuator.c_endStopOpening, .South.Downstream.Gates.East.Actuator.c_endStopClosing, .South.Downstream.Gates.West.Actuator.c_open, .South.Downstream.Gates.West.Actuator.c_close, .South.Downstream.Gates.West.Actuator.c_emergencyStop, .South.Downstream.Gates.West.Actuator.c_endStopOpening, .South.Downstream.Gates.West.Actuator.c_endStopClosing, .South.Downstream.Paddles.East.Actuator.c_open, .South.Downstream.Paddles.East.Actuator.c_close, .South.Downstream.Paddles.East.Actuator.c_emergencyStop, .South.Downstream.Paddles.East.Actuator.c_endStopOpening, .South.Downstream.Paddles.East.Actuator.c_endStopClosing, .South.Downstream.Paddles.West.Actuator.c_open, .South.Downstream.Paddles.West.Actuator.c_close, .South.Downstream.Paddles.West.Actuator.c_emergencyStop, .South.Downstream.Paddles.West.Actuator.c_endStopOpening, .South.Downstream.Paddles.West.Actuator.c_endStopClosing, .South.Downstream.EnteringTLs.East.Actuator.c_r, .South.Downstream.EnteringTLs.East.Actuator.c_rr, .South.Downstream.EnteringTLs.East.Actuator.c_rg, .South.Downstream.EnteringTLs.East.Actuator.c_g, .South.Downstream.EnteringTLs.West.Actuator.c_r, .South.Downstream.EnteringTLs.West.Actuator.c_rr, .South.Downstream.EnteringTLs.West.Actuator.c_rg, .South.Downstream.EnteringTLs.West.Actuator.c_g, .South.Downstream.LeavingTLs.East.Actuator.c_g, .South.Downstream.LeavingTLs.East.Actuator.c_r, .South.Downstream.LeavingTLs.West.Actuator.c_g, .South.Downstream.LeavingTLs.West.Actuator.c_r, .Barrier.Downstream.TLs.East.Actuator.c_g, .Barrier.Downstream.TLs.East.Actuator.c_r, .Barrier.Downstream.TLs.West.Actuator.c_g, .Barrier.Downstream.TLs.West.Actuator.c_r, .Barrier.Upstream.TLs.East.Actuator.c_g, .Barrier.Upstream.TLs.East.Actuator.c_r, .Barrier.Upstream.TLs.West.Actuator.c_g, .Barrier.Upstream.TLs.West.Actuator.c_r, .Barrier.Barrier.Actuator.c_open, .Barrier.Barrier.Actuator.c_close, .Barrier.Barrier.Actuator.c_emergencyStop, .Barrier.Barrier.Actuator.c_endStopOpening, .Barrier.Barrier.Actuator.c_endStopClosing;
